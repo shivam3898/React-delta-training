@@ -74,17 +74,17 @@ class Login extends Component {
                 <div className="main-body">
                     <div className="row">
                         <div className="col-lg-8 offset-sm-2">
-                            <h2 class="text-center mt-3">Login</h2>
+                            <h2 className="text-center mt-5">Login</h2>
                             <div className="card">
 
                                 <Form onSubmit={this.handleLogin} ref={(c) => { this.form = c; }}>
                                     <div className="card-body">
 
                                         <div className="row mb-3">
-                                            <div className="col-sm-3">
+                                            {/* <div className="col-sm-3">
                                                 <h6 className="mb-0">Username</h6>
-                                            </div>
-                                            <div className="col-sm-9 text-secondary">
+                                            </div> */}
+                                            <div className="col-sm-10 offset-md-1 mt-2 text-secondary">
                                                 <Input
                                                     type="text"
                                                     className="form-control"
@@ -92,15 +92,16 @@ class Login extends Component {
                                                     value={this.state.username}
                                                     onChange={this.onChangeUsername}
                                                     validations={[required]}
+                                                    placeholder="Username"
                                                 />
                                             </div>
                                         </div>
 
                                         <div className="row mb-3">
-                                            <div className="col-sm-3">
+                                            {/* <div className="col-sm-3">
                                                 <h6 className="mb-0">Password</h6>
-                                            </div>
-                                            <div className="col-sm-9 text-secondary">
+                                            </div> */}
+                                            <div className="col-sm-10 offset-md-1 mt-2 text-secondary">
                                                 <Input
                                                     type="password"
                                                     className="form-control"
@@ -108,14 +109,14 @@ class Login extends Component {
                                                     value={this.state.password}
                                                     onChange={this.onChangePassword}
                                                     validations={[required]}
+                                                    placeholder="Password"
                                                 />
                                             </div>
                                         </div>
 
                                         <div className="row">
-                                            <div className="col-sm-3"></div>
-                                            <div className="col-sm-9 text-secondary">
-                                                <button className="btn btn-primary px-4" disabled={this.state.loading}>
+                                            <div className="col-sm-10 offset-md-1 mt-2 text-secondary">
+                                                <button className="btn btn-outline-dark px-4 font-weight-bold" disabled={this.state.loading}>
                                                     {this.state.loading && (
                                                         <span className="spinner-border spinner-border-sm"></span>
                                                     )}
@@ -126,9 +127,13 @@ class Login extends Component {
                                     </div>
 
                                     {message && (
-                                        <div className="form-group">
-                                            <div className="alert alert-danger" role="alert">
-                                                {message}
+                                        <div className="row">
+                                            <div className="col-sm-10 offset-sm-1">
+                                                <div className="form-group">
+                                                    <div className="alert alert-danger" role="alert">
+                                                        {message}
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     )}

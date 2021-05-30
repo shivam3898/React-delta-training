@@ -456,7 +456,7 @@ class Loan extends Component {
                                             <div className="row">
                                                 <div className="col-sm-3"></div>
                                                 <div className="col-sm-9 text-secondary">
-                                                    <button className="btn btn-primary px-4">
+                                                    <button className="btn btn-outline-dark px-4 font-weight-bold">
                                                         Apply
                                                 </button>
                                                 </div>

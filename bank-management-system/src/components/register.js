@@ -208,11 +208,8 @@ class Register extends Component {
                                     {!this.state.successful && (
                                         <div className="card-body">
 
-                                            <div className="row mb-3">
-                                                <div className="col-sm-3">
-                                                    <h6 className="mb-0">Name</h6>
-                                                </div>
-                                                <div className="col-sm-9 text-secondary">
+                                            <div className="row mb-sm-3">
+                                                <div className="col-sm-12 text-secondary">
                                                     <Input
                                                         type="text"
                                                         className="form-control"
@@ -220,15 +217,13 @@ class Register extends Component {
                                                         value={this.state.name}
                                                         onChange={this.onChangeName}
                                                         validations={[required, validName]}
+                                                        placeholder="Full Name"
                                                     />
                                                 </div>
                                             </div>
 
-                                            <div className="row mb-3">
-                                                <div className="col-sm-3">
-                                                    <h6 className="mb-0">Username</h6>
-                                                </div>
-                                                <div className="col-sm-9 text-secondary">
+                                            <div className="row mb-sm-3">
+                                                <div className="col-sm-6 text-secondary">
                                                     <Input
                                                         type="text"
                                                         className="form-control"
@@ -236,15 +231,11 @@ class Register extends Component {
                                                         value={this.state.username}
                                                         onChange={this.onChangeUsername}
                                                         validations={[required]}
+                                                        placeholder="Username"
                                                     />
                                                 </div>
-                                            </div>
 
-                                            <div className="row mb-3">
-                                                <div className="col-sm-3">
-                                                    <h6 className="mb-0">Password</h6>
-                                                </div>
-                                                <div className="col-sm-9 text-secondary">
+                                                <div className="col-sm-6 text-secondary">
                                                     <Input
                                                         type="password"
                                                         className="form-control"
@@ -252,15 +243,14 @@ class Register extends Component {
                                                         value={this.state.password}
                                                         onChange={this.onChangePassword}
                                                         validations={[required]}
+                                                        placeholder="Password"
                                                     />
                                                 </div>
                                             </div>
 
+
                                             <div className="row mb-3">
-                                                <div className="col-sm-3">
-                                                    <h6 className="mb-0">Guardian Type</h6>
-                                                </div>
-                                                <div className="col-sm-9 text-secondary">
+                                                <div className="col-sm-6 text-secondary">
                                                     <Input
                                                         type="text"
                                                         className="form-control"
@@ -268,15 +258,10 @@ class Register extends Component {
                                                         value={this.state.guardianType}
                                                         onChange={this.onChangeGuardianType}
                                                         validations={[required]}
+                                                        placeholder="Guardian Type"
                                                     />
                                                 </div>
-                                            </div>
-
-                                            <div className="row mb-3">
-                                                <div className="col-sm-3">
-                                                    <h6 className="mb-0">Guardian Name</h6>
-                                                </div>
-                                                <div className="col-sm-9 text-secondary">
+                                                <div className="col-sm-6 text-secondary">
                                                     <Input
                                                         type="text"
                                                         className="form-control"
@@ -284,15 +269,13 @@ class Register extends Component {
                                                         value={this.state.guardianName}
                                                         onChange={this.onChangeGuardianName}
                                                         validations={[required]}
+                                                        placeholder="Guardian Name"
                                                     />
                                                 </div>
                                             </div>
 
                                             <div className="row mb-3">
-                                                <div className="col-sm-3">
-                                                    <h6 className="mb-0">Address</h6>
-                                                </div>
-                                                <div className="col-sm-9 text-secondary">
+                                                <div className="col-sm-12 text-secondary">
                                                     <Input
                                                         type="text"
                                                         className="form-control"
@@ -300,15 +283,13 @@ class Register extends Component {
                                                         value={this.state.address}
                                                         onChange={this.onChangeAddress}
                                                         validations={[required]}
+                                                        placeholder="Address"
                                                     />
                                                 </div>
                                             </div>
 
                                             <div className="row mb-3">
-                                                <div className="col-sm-3">
-                                                    <h6 className="mb-0">Citizenship</h6>
-                                                </div>
-                                                <div className="col-sm-9 text-secondary">
+                                                <div className="col-sm-6 text-secondary">
                                                     <Input
                                                         type="text"
                                                         className="form-control"
@@ -316,30 +297,34 @@ class Register extends Component {
                                                         value={this.state.citizenship}
                                                         onChange={this.onChangeCitizenship}
                                                         validations={[required]}
+                                                        placeholder="Citizenship"
+                                                    />
+                                                </div>
+                                                <div className="col-sm-6 text-secondary">
+                                                    <Input
+                                                        type="text"
+                                                        className="form-control"
+                                                        name="emamaritalStatusil"
+                                                        value={this.state.maritalStatus}
+                                                        onChange={this.onChangeMaritalStatus}
+                                                        validations={[required]}
+                                                        placeholder="Marital Status"
                                                     />
                                                 </div>
                                             </div>
 
                                             <div className="row mb-3">
-                                                <div className="col-sm-3">
-                                                    <h6 className="mb-0">Country</h6>
-                                                </div>
-                                                <div className="col-sm-9 text-secondary">
+                                                <div className="col-sm-6 text-secondary">
                                                     <CountryDropdown
                                                         value={this.state.country}
                                                         className="form-control"
                                                         name="country"
                                                         onChange={(val) => this.onChangeCountry(val)}
                                                         validations={[required]}
+                                                        placeholder="Country"
                                                     />
                                                 </div>
-                                            </div>
-
-                                            <div className="row mb-3">
-                                                <div className="col-sm-3">
-                                                    <h6 className="mb-0">State</h6>
-                                                </div>
-                                                <div className="col-sm-9 text-secondary">
+                                                <div className="col-sm-6 text-secondary">
                                                     <RegionDropdown
                                                         disableWhenEmpty={true}
                                                         country={this.state.country}
@@ -348,17 +333,13 @@ class Register extends Component {
                                                         name="state"
                                                         onChange={(val) => this.onChangeState(val)}
                                                         validations={[required]}
+                                                        placeholder="State"
                                                     />
                                                 </div>
                                             </div>
 
-
-
                                             <div className="row mb-3">
-                                                <div className="col-sm-3">
-                                                    <h6 className="mb-0">Email</h6>
-                                                </div>
-                                                <div className="col-sm-9 text-secondary">
+                                                <div className="col-sm-6 text-secondary">
                                                     <Input
                                                         type="text"
                                                         className="form-control"
@@ -366,17 +347,26 @@ class Register extends Component {
                                                         value={this.state.email}
                                                         onChange={this.onChangeEmail}
                                                         validations={[required, validEmail]}
+                                                        placeholder="Email"
+                                                    />
+                                                </div>
+                                                <div className="col-sm-6 text-secondary">
+                                                    <Input
+                                                        type="text"
+                                                        className="form-control"
+                                                        name="number"
+                                                        value={this.state.number}
+                                                        onChange={this.onChangeNumber}
+                                                        validations={[required, validContactNumber]}
+                                                        placeholder="Contact Number"
                                                     />
                                                 </div>
                                             </div>
 
                                             <div className="row mb-3">
-                                                <div className="col-sm-3">
-                                                    <h6 className="mb-0">Gender</h6>
-                                                </div>
-                                                <div className="col-sm-9 text-secondary">
+                                                <div className="col-sm-12 text-secondary">
                                                     <Select name='gender' className="form-control" value={this.state.gender} onChange={this.onChangeGender} validations={[required]}>
-                                                        <option value=''>Select a gender</option>
+                                                        <option value=''>Select your gender</option>
                                                         <option value='Male'>Male</option>
                                                         <option value='Female'>Female</option>
                                                         <option value='Others'>Others</option>
@@ -386,39 +376,7 @@ class Register extends Component {
 
                                             <div className="row mb-3">
                                                 <div className="col-sm-3">
-                                                    <h6 className="mb-0">Marital Status</h6>
-                                                </div>
-                                                <div className="col-sm-9 text-secondary">
-                                                    <Input
-                                                        type="text"
-                                                        className="form-control"
-                                                        name="emamaritalStatusil"
-                                                        value={this.state.maritalStatus}
-                                                        onChange={this.onChangeMaritalStatus}
-                                                        validations={[required]}
-                                                    />
-                                                </div>
-                                            </div>
-
-                                            <div className="row mb-3">
-                                                <div className="col-sm-3">
-                                                    <h6 className="mb-0">Contact Number</h6>
-                                                </div>
-                                                <div className="col-sm-9 text-secondary">
-                                                    <Input
-                                                        type="text"
-                                                        className="form-control"
-                                                        name="number"
-                                                        value={this.state.number}
-                                                        onChange={this.onChangeNumber}
-                                                        validations={[required, validContactNumber]}
-                                                    />
-                                                </div>
-                                            </div>
-
-                                            <div className="row mb-3">
-                                                <div className="col-sm-3">
-                                                    <h6 className="mb-0">Date of Birth</h6>
+                                                    <h6 className="mb-0 mt-sm-2">Date of Birth</h6>
                                                 </div>
                                                 <div className="col-sm-9 text-secondary">
                                                     <Input
@@ -428,28 +386,20 @@ class Register extends Component {
                                                         value={this.state.dob}
                                                         onChange={this.onChangeDob}
                                                         validations={[required, validDob]}
+                                                        placeholder="Date of Birth"
                                                     />
                                                 </div>
                                             </div>
 
                                             <div className="row mb-3">
-                                                <div className="col-sm-3">
-                                                    <h6 className="mb-0">Account Type</h6>
-                                                </div>
-                                                <div className="col-sm-9 text-secondary">
+                                                <div className="col-sm-6 text-secondary">
                                                     <Select name='accountType' className="form-control" value={this.state.accountType} onChange={this.onChangeAccountType} validations={[required]}>
                                                         <option value=''>Select account type</option>
                                                         <option value='Saving'>Saving</option>
                                                         <option value='Salary'>Salary</option>
                                                     </Select>
                                                 </div>
-                                            </div>
-
-                                            <div className="row mb-3">
-                                                <div className="col-sm-3">
-                                                    <h6 className="mb-0">Branch Name</h6>
-                                                </div>
-                                                <div className="col-sm-9 text-secondary">
+                                                <div className="col-sm-6 text-secondary">
                                                     <Input
                                                         type="text"
                                                         className="form-control"
@@ -457,27 +407,19 @@ class Register extends Component {
                                                         value={this.state.branchName}
                                                         onChange={this.onChangeBranchName}
                                                         validations={[required]}
+                                                        placeholder="Branch Name"
                                                     />
                                                 </div>
                                             </div>
 
                                             <div className="row mb-3">
-                                                <div className="col-sm-3">
-                                                    <h6 className="mb-0">Identification Proof Type</h6>
-                                                </div>
-                                                <div className="col-sm-9 text-secondary">
+                                                <div className="col-sm-6 text-secondary">
                                                     <Select name='identificationProofType' className="form-control" value={this.state.identificationProofType} onChange={this.onChangeIdentificationProofType} validations={[required]}>
                                                         <option value=''>Select ID proof</option>
                                                         <option value='PAN'>PAN</option>
                                                     </Select>
                                                 </div>
-                                            </div>
-
-                                            <div className="row mb-3">
-                                                <div className="col-sm-3">
-                                                    <h6 className="mb-0">Identification Document Number</h6>
-                                                </div>
-                                                <div className="col-sm-9 text-secondary">
+                                                <div className="col-sm-6 text-secondary">
                                                     <Input
                                                         type="text"
                                                         className="form-control"
@@ -485,15 +427,17 @@ class Register extends Component {
                                                         value={this.state.identificationDocumentNumber}
                                                         onChange={this.onChangeIdentificationDocumentNumber}
                                                         validations={[required, validPanNumber]}
+                                                        placeholder="Identification Document Number"
                                                     />
                                                 </div>
                                             </div>
 
                                             <div className="row mb-3">
-                                                <div className="col-sm-3">
-                                                    <h6 className="mb-0">Reference Account Holder Name</h6>
-                                                </div>
-                                                <div className="col-sm-9 text-secondary">
+
+                                            </div>
+
+                                            <div className="row mb-3">
+                                                <div className="col-sm-12 text-secondary">
                                                     <Input
                                                         type="text"
                                                         className="form-control"
@@ -501,15 +445,13 @@ class Register extends Component {
                                                         value={this.state.referenceAccountHolderName}
                                                         onChange={this.onChangeReferenceAccountHolderName}
                                                         validations={[required, validName]}
+                                                        placeholder="Reference Account Holder Name"
                                                     />
                                                 </div>
                                             </div>
 
                                             <div className="row mb-3">
-                                                <div className="col-sm-3">
-                                                    <h6 className="mb-0">Reference Account Holder Account Number</h6>
-                                                </div>
-                                                <div className="col-sm-9 text-secondary">
+                                                <div className="col-sm-12 text-secondary">
                                                     <Input
                                                         type="text"
                                                         className="form-control"
@@ -517,15 +459,13 @@ class Register extends Component {
                                                         value={this.state.referenceAccountHolderAccNo}
                                                         onChange={this.onChangeReferenceAccountHolderAccNo}
                                                         validations={[required]}
+                                                        placeholder="Reference Account Holder Account Number"
                                                     />
                                                 </div>
                                             </div>
 
                                             <div className="row mb-3">
-                                                <div className="col-sm-3">
-                                                    <h6 className="mb-0">Reference Account Holder Adderss</h6>
-                                                </div>
-                                                <div className="col-sm-9 text-secondary">
+                                                <div className="col-sm-12 text-secondary">
                                                     <Input
                                                         type="text"
                                                         className="form-control"
@@ -533,6 +473,7 @@ class Register extends Component {
                                                         value={this.state.referenceAccountHolderAddress}
                                                         onChange={this.onChangeReferenceAccountHolderAddress}
                                                         validations={[required]}
+                                                        placeholder="Reference Account Holder Adderss"
                                                     />
                                                 </div>
                                             </div>
@@ -540,7 +481,7 @@ class Register extends Component {
                                             <div className="row">
                                                 <div className="col-sm-3"></div>
                                                 <div className="col-sm-9 text-secondary">
-                                                    <button className="btn btn-primary px-4">Sign Up</button>
+                                                    <button className="btn btn-outline-dark px-4 font-weight-bold">Sign Up</button>
                                                 </div>
                                             </div>
                                         </div>

@@ -1,3 +1,23 @@
+body {
+    font-family: 'Karla', sans-serif;
+    overflow-x: hidden;
+}
+
+.navbar {
+    background-color: hsl(256, 26%, 20%) !important;
+}
+
+.btn {
+    border: 2px solid;
+    border-radius: 0;
+}
+
+h1,
+h2,
+h4 {
+    font-family: 'DM Serif Display', serif;
+}
+
 label {
     display: block;
     margin-top: 10px;
@@ -52,4 +72,16 @@ body {
 
 .me-2 {
     margin-right: .5rem!important;
+}
+
+input[type=text],
+input[type=password] {
+    border: none;
+    border-bottom: 2px solid hsl(256, 26%, 20%);
+}
+
+input[type=text]:focus,
+input[type=password]:focus {
+    box-shadow: none;
+    border-bottom: 1px solid hsl(256, 26%, 20%);
 }

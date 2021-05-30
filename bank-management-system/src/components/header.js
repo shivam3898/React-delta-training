@@ -12,15 +12,15 @@ const Header = (props) => {
                 <div className="collapse navbar-collapse" id="navbarCollapse">
                     <ul className="navbar-nav me-auto mb-2 mb-md-0">
                         <li className="nav-item">
-                            <Link to="/" className="nav-link active" aria-current="page">Home</Link>
+                            <Link to="/" className="nav-link active font-weight-bold" aria-current="page">Home</Link>
                         </li>
                         {!props.currentUser &&
                             <>
                                 <li className="nav-item">
-                                    <Link to="/login" className="nav-link">Login</Link>
+                                    <Link to="/login" className="nav-link font-weight-bold">Login</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link to="/register" className="nav-link">Signup</Link>
+                                    <Link to="/register" className="nav-link font-weight-bold">Signup</Link>
                                 </li>
                             </>
                         }
